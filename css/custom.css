@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'modesevenregular';
+    src: url('fonts/modes___-webfont.woff2') format('woff2'),
+         url('fonts/modes___-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    margin: 100px;
+    color: #33ff00;
+    background: #000;
+    font-family: 'modesevenregular', serif;
+}
+
+h1 {
+    border-bottom: 1px solid #33ff00;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+}
+
+h2 {
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+button {
+    display: block;
+    font-family: 'modesevenregular';
+    height: inherit;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.divider {
+    display: block;
+    height: 1px;
+}
+
+
+/* The below animation snippet is found here: https://goo.gl/wQVeBj */
+
+h2.typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #33ff00; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    animation: 
+      typing 1.5s steps(40, end),
+      blink-caret 1s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    0% { width: 0; border-right: none; }
+    100% { width: 100%; border-right: none; }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    10% { border-color: #33ff00; }
+  }
