@@ -2,6 +2,7 @@ var buttonOne = document.getElementById("buttonOne");
 var buttonTwo = document.getElementById("buttonTwo");
 var buttonThree = document.getElementById("buttonThree");
 var buttonFour = document.getElementById("buttonFour");
+var buttonFive = document.getElementById("buttonFive");
 
 function show(x) {
     document.getElementById(x).className = "";
@@ -59,6 +60,7 @@ buttonTwo.addEventListener("click", function() {
     document.getElementById("userName").innerHTML = userName;
     document.getElementById("userName2").innerHTML = userName;
     document.getElementById("userName3").innerHTML = userName;
+    document.getElementById("userName4").innerHTML = userName;
 
     hide("buttonTwo");
     show("lineSix");
@@ -118,5 +120,65 @@ buttonThree.addEventListener("click", function() {
         removeTypewriter("lineTen");
     }, 3000);
 
+    setTimeout(function() {
+        show("buttonFour");
+    }, 6000);
+
+});
+
+buttonFour.addEventListener("click", function() {
+    alert("Robot has a hard time with Pop Culture and needs some more help...");
+    var celebrityName = prompt("Celebrity:").toUpperCase();
+    var degrees = prompt("Number:").toUpperCase();
+
+    document.getElementById("celebrityName").innerHTML = celebrityName;
+    document.getElementById("degrees").innerHTML = degrees;
+
+    hide("buttonFour");
+    show("lineTwelve");
+    setTypewriter("lineTwelve");
+    removeTypewriter("lineEleven");
+
+    setTimeout(function() {
+        show("lineThirteen");
+        setTypewriter("lineThirteen");
+        removeTypewriter("lineTwelve");
+    }, 3000);
+
+    setTimeout(function() {
+        show("lineFourteen");
+        setTypewriter("lineFourteen");
+        removeTypewriter("lineThirteen");
+    }, 6000);
+
+    setTimeout(function() {
+        show("lineFifteen");
+        setTypewriter("lineFifteen");
+        removeTypewriter("lineFourteen");
+    }, 9000);
+
+    setTimeout(function() {
+        show("buttonFive");
+    }, 12000);
+});
+
+buttonFive.addEventListener("click", function() {   
+    hide("buttonFive");
+    show("lineSixteen");
+    setTypewriter("lineSixteen");
+    removeTypewriter("lineFifteen");
+
+    setTimeout(function() {
+        hide("lineTen");
+        hide("lineEleven");
+        hide("lineTwelve");
+        hide("lineThirteen");
+        hide("lineFourteen");
+        hide("lineFifteen");
+        hide("lineSixteen");
+        
+        show("lineSeventeen");
+        setTypewriter("lineSeventeen");
+    }, 3000);
 });
 
